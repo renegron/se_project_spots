@@ -18,4 +18,4 @@ This project focuses on creating a responsive web interface using grid layouts t
 This webpage is deployed to GitHub Pages.
 
 - Deployment Link:
-  https://github.com/renegron/se_project_spots_main-new
+  https://github.com/renegron/se_project_spots
