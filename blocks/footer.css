@@ -3,8 +3,8 @@
   justify-content: center;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-weight: 400;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer__title {
@@ -13,5 +13,5 @@
   color: #212121;
   opacity: 0.7;
   font-size: 16px;
-  width: 104px;
+  line-height: 100%;
 }

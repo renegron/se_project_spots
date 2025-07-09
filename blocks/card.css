@@ -12,16 +12,16 @@
   align-items: center;
   width: 100%;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
+  margin-top: 12px;
 }
 
 .card__like-button {
-  background-image: url(../images/Like\ Icon.svg);
+  background-image: url(../images/new-like-icon.jpg);
   width: 23px;
   height: 20px;
   border: none;
   transition: color 0.5s ease;
   opacity: 0.4;
-  color: #212121;
   background-color: transparent;
   margin-top: auto;
 }
@@ -37,8 +37,13 @@
   line-height: 120%;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 20px;
+  margin-top: 0;
   margin-bottom: 0;
   color: #212121;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: <value>;
 }
 
 @media screen and (max-width: 320px) {
@@ -49,15 +54,13 @@
   }
 
   .card__content {
-    font-family: "Poppins", Arial, Helvetica, sans-serif;
-    display: flex;
     text-align: center;
     max-width: 288px;
   }
 
   .card__title {
-    margin-top: 20px;
-    justify-content: center;
+    font-size: 16px;
+    line-height: 100%;
   }
 
   .card__like-button {
