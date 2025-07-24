@@ -23,13 +23,6 @@ hr {
   overflow: visible;
 }
 
-p {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  max-width: ;
-}
-
 pre {
   font-family: monospace, monospace;
   font-size: 1em;

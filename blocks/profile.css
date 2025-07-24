@@ -23,7 +23,6 @@
   font-weight: 500;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   line-height: 32px;
-  width: 420px;
   color: #212121;
   font-size: 32px;
 }
@@ -40,7 +39,7 @@
 
 .profile__pencil-image {
   padding-right: 8px;
-  color: #212121;
+  background-color: transparent;
 }
 
 .profile__edit-button {
@@ -94,6 +93,42 @@
   color: #fcf5e5;
 }
 
+@media (min-width: 630px) and (max-width: 1320px) {
+  .profile {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 630px) {
+  .profile {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+  }
+
+  .profile__avatar {
+    margin: 0 0 12px;
+    height: 80px;
+    width: 80px;
+  }
+
+  .profile__edit-button {
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .profile__add-button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    text-align: center;
+    width: 281px;
+    margin-right: auto;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .profile {
     justify-content: center;
@@ -123,8 +158,6 @@
   .profile__add-button {
     margin-top: 15px;
     padding: 10px 20px;
-    background-color: #000;
-    color: #fff;
     text-align: center;
     width: 281px;
     margin-right: auto;
