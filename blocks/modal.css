@@ -9,18 +9,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
+<<<<<<< HEAD
   font-family: "Poppins", Arial, Helvetica, sans-serif;
   padding: 10px;
   opacity: 0;
   transition:
     visibility 0s linear 0.5s,
     opacity 0.5s linear;
+=======
+  font-family: "Poppins" Arial, Helvetica, sans-serif;
+  padding: 10px;
+>>>>>>> ebc80fe3ae4f26cbb93adc94c3527aac8c35e191
 }
 
 .modal_is-opened {
   visibility: visible;
+<<<<<<< HEAD
   opacity: 1;
   transition-delay: 0s;
+=======
+>>>>>>> ebc80fe3ae4f26cbb93adc94c3527aac8c35e191
 }
 
 .modal__container {
@@ -36,10 +44,15 @@
   background-image: url(/images/Close-Icon.jpg);
   border: none;
   position: absolute;
+<<<<<<< HEAD
+=======
+  top: 32px;
+>>>>>>> ebc80fe3ae4f26cbb93adc94c3527aac8c35e191
   right: 50px;
   width: 40px;
   height: 40px;
   opacity: 40%;
+<<<<<<< HEAD
   top: 27px;
 }
 
@@ -47,6 +60,14 @@
   cursor: pointer;
   color: #212121;
   opacity: 0.6;
+=======
+  margin: 0;
+  padding: 0;
+}
+
+.modal__close-button:hover {
+  color: #212121;
+>>>>>>> ebc80fe3ae4f26cbb93adc94c3527aac8c35e191
 }
 
 .modal__title {
@@ -55,6 +76,10 @@
   font-size: 32px;
   font-weight: 500;
   line-height: 100%;
+<<<<<<< HEAD
+=======
+  letter-spacing: 0%;
+>>>>>>> ebc80fe3ae4f26cbb93adc94c3527aac8c35e191
 }
 
 .modal__form {
@@ -62,11 +87,14 @@
   flex-direction: column;
 }
 
+<<<<<<< HEAD
 .modal__post-form {
   display: flex;
   flex-direction: column;
 }
 
+=======
+>>>>>>> ebc80fe3ae4f26cbb93adc94c3527aac8c35e191
 .modal__label {
   display: flex;
   flex-direction: column;
@@ -75,10 +103,14 @@
   font-weight: 500;
   line-height: 110%;
   letter-spacing: 0%;
+<<<<<<< HEAD
   font-family:
     "Poppins" Arial,
     Helvetica,
     sans-serif;
+=======
+  font-family: "Poppins" Arial, Helvetica, sans-serif;
+>>>>>>> ebc80fe3ae4f26cbb93adc94c3527aac8c35e191
   color: #212121;
   opacity: 70%;
 }
@@ -89,7 +121,11 @@
   border-radius: 8px;
   padding: 16px 12px 16px 12px;
   gap: 10px;
+<<<<<<< HEAD
   font-family: "Poppins", Arial, Helvetica, sans-serif;
+=======
+  font-family: "Poppins" Arial, Helvetica, sans-serif;
+>>>>>>> ebc80fe3ae4f26cbb93adc94c3527aac8c35e191
   height: 20px;
   font-weight: 500;
   font-size: 20px;
@@ -129,7 +165,11 @@
     max-height: 333px;
     border-radius: 8px;
     background-color: #ffffff;
+<<<<<<< HEAD
     padding: 12px;
+=======
+    padding: 32px 50px;
+>>>>>>> ebc80fe3ae4f26cbb93adc94c3527aac8c35e191
     position: relative;
   }
 
@@ -147,9 +187,15 @@
 
   .modal__title {
     display: flex;
+<<<<<<< HEAD
     margin: 9px 0 18px;
     color: #212121;
     width: 106px;
+=======
+    margin: 0 0 32px;
+    color: #212121;
+    width: 93px;
+>>>>>>> ebc80fe3ae4f26cbb93adc94c3527aac8c35e191
     height: 20px;
     font-size: 20px;
     font-weight: 500;
@@ -165,10 +211,14 @@
     font-weight: 500;
     line-height: 110%;
     letter-spacing: 0%;
+<<<<<<< HEAD
     font-family:
       "Poppins" Arial,
       Helvetica,
       sans-serif;
+=======
+    font-family: "Poppins" Arial, Helvetica, sans-serif;
+>>>>>>> ebc80fe3ae4f26cbb93adc94c3527aac8c35e191
     color: #212121;
     opacity: 70%;
     width: 276px;
@@ -177,6 +227,7 @@
   .modal__input {
     display: block;
     margin: 8px 0 0;
+<<<<<<< HEAD
     border-radius: 8px;
     padding: 16px 12px 16px 12px;
     gap: 10px;
@@ -184,15 +235,25 @@
       "Poppins" Arial,
       Helvetica,
       sans-serif;
+=======
+    opacity: 30%;
+    border-radius: 8px;
+    padding: 16px 12px 16px 12px;
+    gap: 10px;
+    font-family: "Poppins" Arial, Helvetica, sans-serif;
+>>>>>>> ebc80fe3ae4f26cbb93adc94c3527aac8c35e191
     height: 20px;
     font-weight: 500;
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 0%;
   }
+<<<<<<< HEAD
 
   .modal__close-button {
     top: 10px;
     right: 2%;
   }
+=======
+>>>>>>> ebc80fe3ae4f26cbb93adc94c3527aac8c35e191
 }
