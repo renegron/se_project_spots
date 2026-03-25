@@ -1,5 +1,9 @@
 const initialCards = [
   {
+    name: "Golden Gate Bridge",
+    link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",
+  },
+  {
     name: "Val Thorens",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/1-photo-by-moritz-feldmann-from-pexels.jpg",
   },
@@ -24,6 +28,13 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg",
   },
 ];
+
+const previewModal = document.querySelector("#preview-modal");
+const previewModalCloseButton = document.querySelector(
+  ".modal__close-button_type_preview",
+);
+const previewImageEl = document.querySelector(".modal__image");
+const previewCaption = document.querySelector(".modal__caption");
 
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileBtn = document.querySelector(".profile__edit-button");
@@ -66,7 +77,22 @@ function getCardElement(data) {
 
   const cardLikeEl = cardElement.querySelector(".card__like-button");
   cardLikeEl.addEventListener("click", () => {
-    cardLikeEl.classList.toggle(".card__like-button_active");
+    cardLikeEl.classList.toggle("card__like-button_active");
+  });
+
+  const cardDeleteButton = cardElement.querySelector(".card__delete-button");
+  cardDeleteButton.addEventListener("click", () => {
+    cardDeleteButton.closest(".card").remove();
+  });
+
+  cardImage.addEventListener("click", () => {
+    previewImageEl.src = data.link;
+    previewImageEl.alt = data.name;
+    previewCaption.textContent = data.name;
+    openModal(previewModal);
+  });
+  previewModal.addEventListener("click", () => {
+    closeModal(previewModal);
   });
 
   return cardElement;
