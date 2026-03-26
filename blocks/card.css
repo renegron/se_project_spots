@@ -4,6 +4,7 @@
   object-fit: cover;
   display: block;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .card__content {
@@ -24,6 +25,8 @@
   opacity: 0.4;
   background-color: transparent;
   margin-top: auto;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .card__like-button_active {

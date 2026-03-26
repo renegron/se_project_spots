@@ -35,11 +35,10 @@
   background-image: url(/images/Close-Icon.jpg);
   border: none;
   position: absolute;
-  right: 50px;
+  right: 337px;
   width: 40px;
   height: 40px;
-  opacity: 40%;
-  top: 27px;
+  opacity: 0.4;
 }
 
 .modal__caption {
@@ -50,7 +49,7 @@
   width: 170px;
   color: white;
   padding: 4px 8px 4px 8px;
-  size: 20px;
+  font-size: 20px;
   line-height: 120%;
   letter-spacing: 0%;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
@@ -70,7 +69,7 @@
 
 .modal__close-button_type_preview:hover {
   background-image: url(/images/preview-close-btn-hover.png);
-  opacity: 40%;
+  opacity: 0.4;
 }
 
 .modal__close-button:hover {
@@ -101,16 +100,13 @@
   display: flex;
   flex-direction: column;
   margin: 0 0 32px;
-  size: 16px;
+  font-size: 16px;
   font-weight: 500;
   line-height: 110%;
   letter-spacing: 0%;
-  font-family:
-    "Poppins" Arial,
-    Helvetica,
-    sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   color: #212121;
-  opacity: 70%;
+  opacity: 0.7;
 }
 
 .modal__input {
@@ -125,6 +121,7 @@
   font-size: 20px;
   line-height: 100%;
   letter-spacing: 0%;
+  cursor: pointer;
 }
 
 .modal__input::placeholder {
@@ -137,6 +134,7 @@
   background-color: #212121;
   width: 150px;
   height: 52px;
+  cursor: pointer;
 }
 
 .modal__preview-container {
@@ -208,10 +206,7 @@
     font-weight: 500;
     line-height: 110%;
     letter-spacing: 0%;
-    font-family:
-      "Poppins" Arial,
-      Helvetica,
-      sans-serif;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
     color: #212121;
     opacity: 70%;
     width: 276px;
@@ -223,10 +218,7 @@
     border-radius: 8px;
     padding: 16px 12px 16px 12px;
     gap: 10px;
-    font-family:
-      "Poppins" Arial,
-      Helvetica,
-      sans-serif;
+    font-family: "Poppins", Arial, Helvetica, sans-serif;
     height: 20px;
     font-weight: 500;
     font-size: 16px;
@@ -244,7 +236,7 @@
   top: -2px;
 }
 .modal__caption {
-  width: 157px;
+  width: 196px;
 }
 
 .modal__image {
@@ -252,20 +244,38 @@
 }
 
 @media (min-width: 630px) {
+  .modal__close-button {
+    right: 52px;
+  }
+
   .modal__close-button_type_preview {
     margin-left: 92%;
   }
 }
 
 @media (min-width: 768px) {
+  .modal__close-button {
+    right: 50px;
+  }
+
   .modal__close-button_type_preview {
     margin-left: 94%;
   }
 }
 
 @media (min-width: 1320px) {
+  .modal__close-button {
+    right: 289px;
+  }
+
   .modal__close-button_type_preview {
     margin-left: 101%;
     top: 44px;
+  }
+}
+
+@media (min-width: 1420px) {
+  .modal__close-button {
+    right: 341px;
   }
 }
