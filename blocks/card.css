@@ -6,6 +6,9 @@
   border-radius: 8px;
   cursor: pointer;
 }
+.card {
+  position: relative;
+}
 
 .card__content {
   display: flex;
@@ -52,9 +55,10 @@
   border: none;
   width: 32px;
   height: 32px;
-  margin-top: 10px;
   position: absolute;
   cursor: pointer;
+  top: 15px;
+  right: 15px;
 }
 
 .card__delete-button:hover {
@@ -86,11 +90,10 @@
 
 @media screen and (max-width: 320px) {
   .card__image {
-    max-width: 288px;
-    max-height: 288px;
-    margin: 0 auto;
+    margin: 0 15px;
+    width: 288px;
+    height: 288px;
   }
-
   .card__content {
     text-align: center;
     max-width: 288px;
@@ -99,42 +102,15 @@
   .card__title {
     font-size: 16px;
     line-height: 100%;
+    margin-left: 18px;
   }
 
   .card__like-button {
     margin-top: 0;
+    margin-right: -12px;
   }
-}
 
-@media (max-width: 320px) {
   .card__delete-button {
-    left: 85%;
-  }
-}
-
-@media (min-width: 630px) {
-  .card__delete-button {
-    left: 80%;
-  }
-}
-
-@media (min-width: 768px) {
-  .card__delete-button {
-    left: 73%;
-  }
-}
-
-@media (min-width: 1320px) {
-  .card__delete-button {
-    left: auto;
-    margin-left: 30%;
-  }
-}
-
-@media (min-width: 1420px) {
-  .card__delete-button {
-    display: block;
-    left: auto;
-    margin-left: 29%;
+    right: 32px;
   }
 }

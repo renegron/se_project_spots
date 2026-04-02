@@ -21,17 +21,11 @@
   }
 }
 
-@media (min-width: 320px) and (max-width: 630px) {
-  .cards__list {
-    justify-content: center;
-  }
-}
-
 @media screen and (max-width: 320px) {
   .cards__list {
     justify-content: center;
     align-items: center;
-    grid-template-columns: repeat(auto-fit, 100%);
+    grid-template-columns: repeat(auto-fit, 320px);
     padding-bottom: 20px;
   }
 }
