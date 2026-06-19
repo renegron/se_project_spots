@@ -8,6 +8,7 @@
 }
 .card {
   position: relative;
+  width: 413px;
 }
 
 .card__content {
@@ -88,7 +89,7 @@
   font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 670px) {
   .card__image {
     margin: 0 15px;
     width: 288px;
@@ -110,6 +111,10 @@
   }
 
   .card__delete-button {
-    right: 32px;
+    right: 2px;
+  }
+
+  .card {
+    width: 288px;
   }
 }

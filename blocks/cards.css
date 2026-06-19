@@ -21,11 +21,11 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 670px) {
   .cards__list {
     justify-content: center;
     align-items: center;
-    grid-template-columns: repeat(auto-fit, 320px);
+    grid-template-columns: repeat(auto-fit, 317px);
     padding-bottom: 20px;
   }
 }

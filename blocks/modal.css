@@ -37,7 +37,8 @@
   background-image: url(/images/Close-Icon.jpg);
   border: none;
   position: absolute;
-  right: 20px;
+  top: 36px;
+  right: 50px;
   width: 40px;
   height: 40px;
   opacity: 0.4;
@@ -156,13 +157,15 @@
 
 @media screen and (max-width: 630px) {
   .modal__container {
-    max-width: 300px;
-    max-height: 360px;
     border-radius: 8px;
     padding: 22px 12px 12px;
     background-color: #ffffff;
-    padding: 12px;
     position: relative;
+  }
+
+  .modal__title {
+    font-size: 24px;
+    line-height: 100%;
   }
 
   .modal__save-button {
