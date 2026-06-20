@@ -25,7 +25,7 @@
   .cards__list {
     justify-content: center;
     align-items: center;
-    grid-template-columns: repeat(auto-fit, 317px);
+    grid-template-columns: repeat(auto-fit, 288px);
     padding-bottom: 20px;
   }
 }
