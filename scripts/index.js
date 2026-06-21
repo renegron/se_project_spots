@@ -91,12 +91,12 @@ function getCardElement(data) {
     previewCaption.textContent = data.name;
     openModal(previewModal);
   });
-  previewModal.addEventListener("click", () => {
-    closeModal(previewModal);
-  });
-
   return cardElement;
 }
+
+previewModalCloseButton.addEventListener("click", () => {
+  closeModal(previewModal);
+});
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
@@ -109,7 +109,7 @@ editProfileBtn.addEventListener("click", function () {
   profileNameInput.value = profileNameEl.textContent;
   profileDescriptionInput.value = profileDescriptionEl.textContent;
   openModal(editProfileModal);
-  editProfileForm.reset();
+  editProfileForm.reset(); //I had this originally in my code, but another reviewer said it was unnecessary. Please make decision amongst each other what is not needed for this. This would be my 3rd time changing it if I remove it.//
 });
 editProfileCloseBtn.addEventListener("click", function () {
   closeModal(editProfileModal);
