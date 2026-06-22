@@ -34,7 +34,7 @@
 }
 
 .modal__close-button {
-  background-image: url(/images/Close-Icon.jpg);
+  background-image: url(../images/Close-Icon.jpg);
   border: none;
   position: absolute;
   top: 36px;
@@ -60,7 +60,7 @@
 }
 
 .modal__close-button_type_preview {
-  background-image: url(/images/preview-close-btn.png);
+  background-image: url(../images/preview-close-btn.png);
   position: absolute;
   width: 40px;
   height: 40px;
@@ -72,7 +72,7 @@
 }
 
 .modal__close-button_type_preview:hover {
-  background-image: url(/images/preview-close-btn-hover.png);
+  background-image: url(../images/preview-close-btn-hover.png);
   opacity: 0.4;
 }
 
