@@ -140,6 +140,7 @@
 .modal__input:error {
   border: 1px solid #ff0000;
   opacity: 60%;
+  margin-bottom: 32px;
 }
 
 .modal__input::placeholder {
@@ -149,6 +150,18 @@
 .modal__input::placeholder:error {
   color: #212121;
   opacity: 30%;
+}
+
+.modal__input-error {
+  font-weight: 500;
+  color: #ff0000;
+  display: block;
+  margin-bottom: 32px;
+  margin-top: 8px;
+  width: 630px;
+  height: 18px;
+  letter-spacing: 0%;
+  line-height: 110%;
 }
 
 .modal__save-button {
