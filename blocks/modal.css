@@ -128,8 +128,27 @@
   cursor: pointer;
 }
 
+.modal__input:hover {
+  border: 1px solid #212121;
+}
+
+.modal__input:filled {
+  border: 1px solid #212121;
+  opacity: 40%;
+}
+
+.modal__input:error {
+  border: 1px solid #ff0000;
+  opacity: 60%;
+}
+
 .modal__input::placeholder {
   color: #2121214d;
+}
+
+.modal__input::placeholder:error {
+  color: #212121;
+  opacity: 30%;
 }
 
 .modal__save-button {
@@ -139,6 +158,16 @@
   width: 150px;
   height: 52px;
   cursor: pointer;
+}
+
+.modal__save-button:hover {
+  background-color: #212121;
+  opacity: 80%;
+}
+
+.modal__save-button:disabled {
+  background-color: #212121;
+  opacity: 50%;
 }
 
 .modal__preview-container {
