@@ -1,68 +1,91 @@
-const checkInputValidity = (formEl, inputEl) => {
-  if (!inputEl.validity.valid) {
-    showInputError(formEl, inputEl, inputEl.validationMessage);
-  } else {
-    hideInputError(formEl, inputEl);
-  }
+const settings = {
+  formSelector: ".modal__form, .modal__post-form",
+  inputSelector: ".modal__input",
+  submitButtonSelector: ".modal__save-button",
+  inactiveButtonClass: "modal__save-button-error",
+  inputErrorClass: "modal__input_type_error",
+  errorClass: "modal__error_visible",
 };
 
-const showInputError = (formEl, inputEl, errorMessage) => {
+const showInputError = (formEl, inputEl, errorMessage, settings) => {
   const errorMessageEl = formEl.querySelector(`#${inputEl.id}-error`);
   if (errorMessageEl) {
     errorMessageEl.textContent = errorMessage;
+    errorMessageEl.classList.add(settings.errorClass);
   }
+  inputEl.classList.add(settings.inputErrorClass);
 };
 
-const hideInputError = (formEl, inputEl) => {
+const hideInputError = (formEl, inputEl, settings) => {
   const errorMessageEl = formEl.querySelector(`#${inputEl.id}-error`);
   if (errorMessageEl) {
     errorMessageEl.textContent = "";
+    errorMessageEl.classList.remove(settings.errorClass);
+  }
+  inputEl.classList.remove(settings.inputErrorClass);
+};
+
+const checkInputValidity = (formEl, inputEl, settings) => {
+  if (!inputEl.validity.valid) {
+    showInputError(formEl, inputEl, inputEl.validationMessage, settings);
+  } else {
+    hideInputError(formEl, inputEl, settings);
   }
 };
 
 const hasInvalidInput = (inputList) => {
-  return inputList.some((inputEl) => {
-    return !inputEl.validity.valid;
-  });
+  return inputList.some((inputEl) => !inputEl.validity.valid);
 };
 
-const toggleButtonState = (inputList, buttonEl) => {
+const toggleButtonState = (inputList, buttonEl, settings) => {
   if (hasInvalidInput(inputList)) {
-    submitButtonDisabled(buttonEl);
+    buttonEl.classList.add(settings.inactiveButtonClass);
+    buttonEl.disabled = true;
   } else {
-    submitButtonEnabled(buttonEl);
+    buttonEl.classList.remove(settings.inactiveButtonClass);
+    buttonEl.disabled = false;
   }
 };
 
-const setEventListeners = (formEl) => {
-  const inputList = Array.from(formEl.querySelectorAll(".modal__input"));
-  const buttonEl = formEl.querySelector(".modal__button");
+const setEventListeners = (formEl, settings) => {
+  const inputList = Array.from(formEl.querySelectorAll(settings.inputSelector));
+  const buttonEl = formEl.querySelector(settings.submitButtonSelector);
 
-  toggleButtonState(inputList, buttonEl);
+  if (!buttonEl) return;
+
+  toggleButtonState(inputList, buttonEl, settings);
 
   inputList.forEach((inputEl) => {
-    inputEl.addEventListener("input", function () {
-      checkInputValidity(formEl, inputEl);
-      toggleButtonState(inputList, buttonEl);
+    inputEl.addEventListener("input", () => {
+      checkInputValidity(formEl, inputEl, settings);
+      toggleButtonState(inputList, buttonEl, settings);
     });
   });
 };
 
-const submitButtonDisabled = (buttonEl) => {
-  buttonEl.classList.add("modal__save-button-error");
-  buttonEl.disabled = true;
+const resetValidation = (formEl, settings) => {
+  const inputList = Array.from(formEl.querySelectorAll(settings.inputSelector));
+  const buttonEl = formEl.querySelector(settings.submitButtonSelector);
+
+  if (!buttonEl) return;
+
+  inputList.forEach((inputEl) => {
+    hideInputError(formEl, inputEl, settings);
+  });
+
+  toggleButtonState(inputList, buttonEl, settings);
 };
 
-const submitButtonEnabled = (buttonEl) => {
-  buttonEl.classList.remove("modal__save-button-error");
-  buttonEl.disabled = false;
+const resetForm = (formEl, settings) => {
+  formEl.reset();
+  resetValidation(formEl, settings);
 };
 
-const enableValidation = () => {
-  const formList = document.querySelectorAll(".modal__form, .modal__post-form");
+const enableValidation = (settings) => {
+  const formList = document.querySelectorAll(settings.formSelector);
   formList.forEach((formEl) => {
-    setEventListeners(formEl);
+    setEventListeners(formEl, settings);
   });
 };
 
-enableValidation();
+enableValidation(settings);

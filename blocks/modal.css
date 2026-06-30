@@ -134,12 +134,10 @@
 
 .modal__input:valid {
   border: 1px solid #212121;
-  opacity: 40%;
 }
 
-.modal__input:invalid {
+.modal__input_type_error {
   border: 1px solid #ff0000;
-  opacity: 60%;
   margin-bottom: 32px;
 }
 
@@ -160,6 +158,10 @@
   height: 18px;
   letter-spacing: 0%;
   line-height: 110%;
+}
+
+.modal__error_visible {
+  display: block;
 }
 
 .modal__save-button {
