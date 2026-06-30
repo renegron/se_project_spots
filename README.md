@@ -1,21 +1,85 @@
 # Project Name: Spots
 
-## Description
+A responsive photo-sharing web application that allows users to discover and share travel destinations through beautiful photo cards. Built as part of a frontend development sprint focusing on JavaScript architecture, form validation, and interactive UI components.
 
-This project focuses on creating a responsive web interface using grid layouts to ensure seamless adaptability across different devices, including desktops, tablets, and mobile phones. The development process utilized Git Bash for version control and efficient workflow management. Figma was used for designing and prototyping the UI, ensuring a user-friendly experience. Emphasis was placed on responsive design principles to optimize the layout and functionality for 1440px & 320px screen sizes.
+## 🎥 Demo Video
 
-## Features
+Watch the full project pitch and walkthrough:
 
-- Responsive Grid Layout: Utilizes CSS Grid to create a flexible and adaptive layout that adjusts seamlessly to different screen sizes.
-- Cross-Device Compatibility: Optimized for desktops, tablets, and mobile devices, ensuring a consistent user experience.
-- Mobile-First Design: Built with a mobile-first approach to prioritize performance and usability on smaller screens.
-- Figma Prototyping: Designed and iterated using Figma for high-fidelity prototypes and a streamlined design-to-development workflow.
-- Version Control with Git Bash: Managed code versioning and collaboration efficiently using Git Bash commands.
-- Dynamic Scaling Images: Images scale proportionally across devices using responsive design techniques to maintain visual quality.
+[▶️ Project Pitch Video](https://drive.google.com/file/d/1lqJQ0BP9amfdyEQPhJNXOWjnfbzFzniv/view?usp=sharing)
 
-## Deployment
+## 📸 Screenshots
 
-This webpage is deployed to GitHub Pages.
+### Homepage
+
+![Spots Homepage](./screenshots/homepage.png)
+
+### Edit Profile Modal
+
+![Edit Profile Modal](./screenshots/edit-profile-modal.png)
+
+### New Post Modal
+
+![New Post Modal](./screenshots/new-post-modal.png)
+
+### Liked Posts
+
+![Liked Posts](./screenshots/liked-posts.png)
+
+## ✨ Features
+
+- **Dynamic Photo Cards** — Rendered from a JavaScript array using HTML `<template>` elements.
+- **Add New Posts** — Create new travel spots through a modal form with image URL and caption.
+- **Configurable Form Validation** — Reusable validation system using a single `settings` object.
+- **Interactive Modals** — Fully functional New Post, Edit Profile, and Image Preview modals.
+- **Like & Delete Functionality** — Users can like and remove posts directly from the feed.
+- **Responsive Design** — Clean and modern layout across different screen sizes.
+- **Clean Code Architecture** — Reusable functions for modals and form handling.
+
+## 🛠 Tech Stack
+
+- **HTML5** — Semantic markup with `<template>` elements
+- **CSS3** — Custom styling following BEM methodology
+- **JavaScript (ES6+)** — DOM manipulation, event handling, and dynamic rendering
+- **Form Validation** — Custom configurable validation system
+
+## ▶️ Getting Started
+
+### Prerequisites
+
+- A modern web browser (Chrome, Firefox, Edge, Safari)
+
+### How to Run Locally
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/spots.git
+   cd spots
+   ```
+2. Open index.html in your browser, or use a Live Server extension for the best experience.
+
+💡 Key Learnings
+
+Built a reusable and configurable form validation system using a settings object.
+Learned how to properly use HTML <template> elements for dynamic content.
+Improved skills in managing multiple modals with clean, reusable functions.
+Understood how to control UI feedback (error states) through JavaScript classes instead of relying only on CSS.
+Gained experience writing scalable and maintainable frontend JavaScript code.
+
+🔮 Future Improvements
+
+Add backend integration to persist posts
+Allow image uploads instead of only URLs
+Implement user authentication
+Add ability to edit and delete existing posts
+Improve error handling for invalid image links
+
+👤 Author
+Reuben Negron
+Frontend Developer | Software Engineering Student
 
 - Deployment Link:
-  https://renegron.github.io/se_project_spots/
+  Github: https://renegron.github.io/se_project_spots/
+  LinkedIn: https://www.linkedin.com/in/reuben-negron-405bab120/
+
+Built with ❤️ during my Software Engineering journey.
