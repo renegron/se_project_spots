@@ -147,7 +147,7 @@
 
 .modal__input:invalid::placeholder {
   color: #212121;
-  opacity: 30%;
+  opacity: 0.3;
 }
 
 .modal__error {
@@ -175,12 +175,12 @@
 
 .modal__save-button:hover {
   background-color: #212121;
-  opacity: 80%;
+  opacity: 0.8;
 }
 
 .modal__save-button:disabled {
   background-color: #212121;
-  opacity: 50%;
+  opacity: 0.5;
 }
 
 .modal__preview-container {
