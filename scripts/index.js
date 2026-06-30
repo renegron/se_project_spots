@@ -126,7 +126,6 @@ editProfileForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
   profileNameEl.textContent = profileNameInput.value;
   profileDescriptionEl.textContent = profileDescriptionInput.value;
-  closeModal(editProfileModal);
 });
 
 addCardFormElement.addEventListener("submit", function (evt) {
@@ -139,10 +138,27 @@ addCardFormElement.addEventListener("submit", function (evt) {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   closeModal(newPostModal);
-  addCardFormElement.reset();
 });
 
 initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);
   cardsList.append(cardElement);
+});
+
+const escapeKeyCloseModal = (evt) => {
+  if (evt.key === "Escape") {
+    const openedModal = document.querySelector(".modal_is-opened");
+    closeModal(openedModal);
+  }
+};
+
+document.addEventListener("keydown", escapeKeyCloseModal);
+
+document.addEventListener("mousedown", (evt) => {
+  if (evt.target.classList.contains("modal")) {
+    const openedModal = document.querySelector(".modal_is-opened");
+    if (openedModal) {
+      closeModal(openedModal);
+    }
+  }
 });

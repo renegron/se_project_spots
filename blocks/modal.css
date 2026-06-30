@@ -132,12 +132,12 @@
   border: 1px solid #212121;
 }
 
-.modal__input:filled {
+.modal__input:valid {
   border: 1px solid #212121;
   opacity: 40%;
 }
 
-.modal__input:error {
+.modal__input:invalid {
   border: 1px solid #ff0000;
   opacity: 60%;
   margin-bottom: 32px;
@@ -147,17 +147,15 @@
   color: #2121214d;
 }
 
-.modal__input::placeholder:error {
+.modal__input:invalid::placeholder {
   color: #212121;
   opacity: 30%;
 }
 
-.modal__input-error {
+.modal__error {
   font-weight: 500;
   color: #ff0000;
   display: block;
-  margin-bottom: 32px;
-  margin-top: 8px;
   width: 630px;
   height: 18px;
   letter-spacing: 0%;

@@ -62,7 +62,10 @@
       </footer>
       <div class="modal" id="edit-profile-modal">
         <div class="modal__container">
-          <button type="button" class="modal__close-button"></button>
+          <button
+            type="button"
+            class="modal__close-button modal__button"
+          ></button>
           <h2 class="modal__title">Edit Profile</h2>
           <form class="modal__form">
             <label for="profile-name-input" class="modal__label">
@@ -76,9 +79,10 @@
                 maxlength="40"
                 required
               />
-              <span id="name-input-error" class="modal__input-error"
-                >Please fill out this field.</span
-              >
+              <span
+                id="profile-name-input-error"
+                class="modal__error-message modal__error"
+              ></span>
             </label>
             <label for="profile-description-input" class="modal__label">
               Description
@@ -93,18 +97,24 @@
               />
               <span
                 id="profile-description-input-error"
-                class="modal__input-error"
-                >Please lengthen this text to 2 characters or more (you are
-                currently using)</span
-              >
+                class="modal__error-message modal__error"
+              ></span>
             </label>
-            <button type="submit" class="modal__save-button">Save</button>
+            <button
+              type="submit"
+              class="modal__save-button modal__button modal__save-button-error"
+            >
+              Save
+            </button>
           </form>
         </div>
       </div>
       <div class="modal" id="new-post-modal">
         <div class="modal__container">
-          <button type="button" class="modal__close-button"></button>
+          <button
+            type="button"
+            class="modal__close-button modal__button"
+          ></button>
           <h2 class="modal__title">New Post</h2>
           <form class="modal__post-form">
             <label for="card-image-input" class="modal__label">
@@ -116,9 +126,10 @@
                 placeholder="Place a link to the picture"
                 required
               />
-              <span id="image-input-error" class="modal__input-error"
-                >Please enter a URL.</span
-              >
+              <span
+                id="card-image-input-error"
+                class="modal__error-message modal__error"
+              ></span>
             </label>
             <label for="card-description-input" class="modal__label">
               Caption
@@ -131,11 +142,17 @@
                 maxlength="30"
                 required
               />
-              <span id="description-input-error" class="modal__input-error"
-                >Please fill out this field.</span
-              >
+              <span
+                id="card-description-input-error"
+                class="modal__error-message modal__error"
+              ></span>
             </label>
-            <button type="submit" class="modal__save-button">Save</button>
+            <button
+              type="submit"
+              class="modal__save-button modal__button modal__save-button-error"
+            >
+              Save
+            </button>
           </form>
         </div>
       </div>
