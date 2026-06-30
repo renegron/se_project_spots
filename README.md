@@ -8,24 +8,6 @@ Watch the full project pitch and walkthrough:
 
 [▶️ Project Pitch Video](https://drive.google.com/file/d/1lqJQ0BP9amfdyEQPhJNXOWjnfbzFzniv/view?usp=sharing)
 
-## 📸 Screenshots
-
-### Homepage
-
-![Spots Homepage](./screenshots/homepage.png)
-
-### Edit Profile Modal
-
-![Edit Profile Modal](./screenshots/edit-profile-modal.png)
-
-### New Post Modal
-
-![New Post Modal](./screenshots/new-post-modal.png)
-
-### Liked Posts
-
-![Liked Posts](./screenshots/liked-posts.png)
-
 ## ✨ Features
 
 - **Dynamic Photo Cards** — Rendered from a JavaScript array using HTML `<template>` elements.
