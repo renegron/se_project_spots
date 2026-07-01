@@ -92,21 +92,10 @@ function openModal(modal) {
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
-
-  if (modal.id === "new-post-modal") {
-    resetForm(newPostForm, settings);
-  }
-
-  if (modal.id === "edit-profile-modal") {
-    resetForm(editProfileForm, settings);
-  }
 }
 
-previewModalCloseButton.addEventListener("click", () => {
-  closeModal(previewModal);
-});
-
 editProfileBtn.addEventListener("click", () => {
+  resetValidation(editProfileForm, settings);
   profileNameInput.value = profileNameEl.textContent;
   profileDescriptionInput.value = profileDescriptionEl.textContent;
   openModal(editProfileModal);
@@ -114,8 +103,11 @@ editProfileBtn.addEventListener("click", () => {
 
 editProfileForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
+
   profileNameEl.textContent = profileNameInput.value;
   profileDescriptionEl.textContent = profileDescriptionInput.value;
+
+  resetForm(editProfileForm, settings);
   closeModal(editProfileModal);
 });
 
@@ -133,7 +125,12 @@ newPostForm.addEventListener("submit", (evt) => {
 
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
-
+  resetForm(newPostForm, settings);
+  const submitButton = newPostForm.querySelector(settings.submitButtonSelector);
+  if (submitButton) {
+    submitButton.classList.add(settings.inactiveButtonClass);
+    submitButton.disabled = true;
+  }
   closeModal(newPostModal);
 });
 
@@ -142,24 +139,31 @@ initialCards.forEach((item) => {
   cardsList.append(cardElement);
 });
 
-const closeButtons = document.querySelectorAll(".modal__close-button");
-closeButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const modal = button.closest(".modal");
-    if (modal) closeModal(modal);
+const modals = document.querySelectorAll(".modal");
+modals.forEach((modal) => {
+  modal.addEventListener("mousedown", (e) => {
+    if (
+      e.target === modal ||
+      e.target.classList.contains("modal__close-button")
+    ) {
+      closeModal(modal);
+    }
   });
 });
 
-document.addEventListener("mousedown", (evt) => {
-  if (evt.target.classList.contains("modal")) {
-    const openedModal = document.querySelector(".modal_is-opened");
-    if (openedModal) closeModal(openedModal);
-  }
-});
-
-document.addEventListener("keydown", (evt) => {
+function handleEscape(evt) {
   if (evt.key === "Escape") {
     const openedModal = document.querySelector(".modal_is-opened");
-    if (openedModal) closeModal(openedModal);
+    closeModal(openedModal);
   }
-});
+}
+
+function openModal(modal) {
+  modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", handleEscape);
+}
+
+function closeModal(modal) {
+  modal.classList.remove("modal_is-opened");
+  document.removeEventListener("keydown", handleEscape);
+}
