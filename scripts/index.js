@@ -86,14 +86,6 @@ function getCardElement(data) {
   return cardElement;
 }
 
-function openModal(modal) {
-  modal.classList.add("modal_is-opened");
-}
-
-function closeModal(modal) {
-  modal.classList.remove("modal_is-opened");
-}
-
 editProfileBtn.addEventListener("click", () => {
   resetValidation(editProfileForm, settings);
   profileNameInput.value = profileNameEl.textContent;
@@ -107,7 +99,6 @@ editProfileForm.addEventListener("submit", (evt) => {
   profileNameEl.textContent = profileNameInput.value;
   profileDescriptionEl.textContent = profileDescriptionInput.value;
 
-  resetForm(editProfileForm, settings);
   closeModal(editProfileModal);
 });
 
@@ -126,11 +117,6 @@ newPostForm.addEventListener("submit", (evt) => {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   resetForm(newPostForm, settings);
-  const submitButton = newPostForm.querySelector(settings.submitButtonSelector);
-  if (submitButton) {
-    submitButton.classList.add(settings.inactiveButtonClass);
-    submitButton.disabled = true;
-  }
   closeModal(newPostModal);
 });
 
